@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-light text-dark font-sans;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-10 text-center relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    @apply absolute w-20 h-1 bg-primary left-1/2 -translate-x-1/2 bottom-0 mt-4 rounded-full;
+    bottom: -10px;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-secondary text-white px-6 py-3 rounded-md transition-colors duration-300 font-medium;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-md transition-colors duration-300 font-medium;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 transition-transform duration-300 hover:-translate-y-2;
+  }
+}
+
+.skill-progress {
+  height: 10px;
+  @apply bg-gray-200 rounded-full overflow-hidden;
+}
+
+.skill-progress-bar {
+  @apply bg-primary h-full rounded-full;
+  transition: width 1.5s ease-in-out;
+}
+
+.project-card {
+  @apply bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300;
+}
+
+.project-card:hover {
+  @apply shadow-2xl transform -translate-y-2;
+}
+
+.nav-link {
+  @apply relative text-gray-700 hover:text-primary transition-colors;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.nav-link.active::after {
+  @apply w-full;
+} 
