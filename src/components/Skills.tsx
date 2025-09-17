@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface Skill {
   name: string;
-  proficiency: number;
   icon: string;
 }
 
@@ -37,30 +36,30 @@ const Skills: React.FC = () => {
   }, []);
   
   const frontendSkills: Skill[] = [
-    { name: 'HTML/CSS', proficiency: 90, icon: '🌐' },
-    { name: 'JavaScript', proficiency: 85, icon: '📜' },
-    { name: 'React', proficiency: 90, icon: '⚛️' },
-    { name: 'TypeScript', proficiency: 80, icon: '📘' },
-    { name: 'TailwindCSS', proficiency: 85, icon: '🎨' },
-    { name: 'Responsive Design', proficiency: 90, icon: '📱' },
+    { name: 'HTML/CSS', icon: '🌐' },
+    { name: 'JavaScript', icon: '📜' },
+    { name: 'React', icon: '⚛️' },
+    { name: 'TypeScript', icon: '📘' },
+    { name: 'TailwindCSS', icon: '🎨' },
+    { name: 'Responsive Design', icon: '📱' },
   ];
   
   const backendSkills: Skill[] = [
-    { name: 'Node.js', proficiency: 85, icon: '🟢' },
-    { name: 'Express', proficiency: 80, icon: '🚄' },
-    { name: 'MongoDB', proficiency: 75, icon: '🍃' },
-    { name: 'GraphQL', proficiency: 70, icon: '⬡' },
-    { name: 'REST APIs', proficiency: 85, icon: '🔌' },
-    { name: 'SQL', proficiency: 75, icon: '🗄️' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'Express', icon: '🚄' },
+    { name: 'MongoDB', icon: '🍃' },
+    { name: 'GraphQL', icon: '⬡' },
+    { name: 'REST APIs', icon: '🔌' },
+    { name: 'SQL', icon: '🗄️' },
   ];
   
   const otherSkills: Skill[] = [
-    { name: 'Git/GitHub', proficiency: 85, icon: '🔄' },
-    { name: 'Docker', proficiency: 70, icon: '🐳' },
-    { name: 'CI/CD', proficiency: 75, icon: '🔄' },
-    { name: 'Testing', proficiency: 80, icon: '🧪' },
-    { name: 'Agile/Scrum', proficiency: 85, icon: '📊' },
-    { name: 'UI/UX Design', proficiency: 70, icon: '🎯' },
+    { name: 'Git/GitHub', icon: '🔄' },
+    { name: 'Docker', icon: '🐳' },
+    { name: 'CI/CD', icon: '🔄' },
+    { name: 'Testing', icon: '🧪' },
+    { name: 'Agile/Scrum', icon: '📊' },
+    { name: 'UI/UX Design', icon: '🎯' },
   ];
   
   return (
@@ -84,22 +83,19 @@ const Skills: React.FC = () => {
             <h3 className="text-xl font-bold text-dark mb-6 flex items-center">
               <span className="text-primary text-2xl mr-2">💻</span> Frontend Development
             </h3>
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-3">
               {frontendSkills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.icon} {skill.name}</span>
-                    <span className="text-gray-500">{skill.proficiency}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div 
-                      className="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
-                      style={{ 
-                        width: isVisible ? `${skill.proficiency}%` : '0%',
-                        transitionDelay: `${index * 100}ms`
-                      }}
-                    ></div>
-                  </div>
+                <div 
+                  key={index}
+                  className={`bg-gray-50 p-3 rounded-lg border-l-4 border-primary transition-all duration-500 transform hover:shadow-md ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <span className="font-medium text-dark flex items-center">
+                    <span className="text-lg mr-3">{skill.icon}</span>
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -114,22 +110,19 @@ const Skills: React.FC = () => {
             <h3 className="text-xl font-bold text-dark mb-6 flex items-center">
               <span className="text-primary text-2xl mr-2">🔧</span> Backend Development
             </h3>
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-3">
               {backendSkills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.icon} {skill.name}</span>
-                    <span className="text-gray-500">{skill.proficiency}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div 
-                      className="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
-                      style={{ 
-                        width: isVisible ? `${skill.proficiency}%` : '0%',
-                        transitionDelay: `${(index + 6) * 100}ms`
-                      }}
-                    ></div>
-                  </div>
+                <div 
+                  key={index}
+                  className={`bg-gray-50 p-3 rounded-lg border-l-4 border-primary transition-all duration-500 transform hover:shadow-md ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${(index + 6) * 100}ms` }}
+                >
+                  <span className="font-medium text-dark flex items-center">
+                    <span className="text-lg mr-3">{skill.icon}</span>
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -144,22 +137,19 @@ const Skills: React.FC = () => {
             <h3 className="text-xl font-bold text-dark mb-6 flex items-center">
               <span className="text-primary text-2xl mr-2">🛠️</span> Other Skills
             </h3>
-            <div className="space-y-5">
+            <div className="grid grid-cols-1 gap-3">
               {otherSkills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.icon} {skill.name}</span>
-                    <span className="text-gray-500">{skill.proficiency}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5">
-                    <div 
-                      className="bg-primary h-2.5 rounded-full transition-all duration-1000 ease-out"
-                      style={{ 
-                        width: isVisible ? `${skill.proficiency}%` : '0%',
-                        transitionDelay: `${(index + 12) * 100}ms`
-                      }}
-                    ></div>
-                  </div>
+                <div 
+                  key={index}
+                  className={`bg-gray-50 p-3 rounded-lg border-l-4 border-primary transition-all duration-500 transform hover:shadow-md ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${(index + 12) * 100}ms` }}
+                >
+                  <span className="font-medium text-dark flex items-center">
+                    <span className="text-lg mr-3">{skill.icon}</span>
+                    {skill.name}
+                  </span>
                 </div>
               ))}
             </div>

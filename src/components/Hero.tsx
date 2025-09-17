@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/rahulsr37" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-600 hover:text-primary transition-colors"
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               </svg>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/rahul-singh-a45947218/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-600 hover:text-primary transition-colors"

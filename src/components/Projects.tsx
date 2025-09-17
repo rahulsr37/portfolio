@@ -18,63 +18,23 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-commerce Platform',
-      description: 'A full-featured e-commerce platform with product management, cart functionality, and secure payment processing.',
-      image: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      title: 'Thoughts',
+      description: 'A comprehensive full-stack web platform that draws inspiration from popular microblogging services. Built with modern technology stack and designed to be fully responsive, ensuring a seamless experience on both desktop and mobile devices.',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
       category: 'web',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      link: 'https://example.com/ecommerce',
-      github: 'https://github.com/username/ecommerce'
+      technologies: ['React.js', 'Node.js', 'Express', 'Tailwind CSS', 'MongoDB Atlas'],
+      link: 'https://example.com/thoughts',
+      github: 'https://github.com/username/thoughts'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A productivity app for managing tasks, projects, and team collaboration with real-time updates.',
-      image: 'https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      category: 'app',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      link: 'https://example.com/taskapp',
-      github: 'https://github.com/username/taskapp'
-    },
-    {
-      id: 3,
-      title: 'Corporate Website Redesign',
-      description: 'Complete redesign of a corporate website focusing on modern design, accessibility, and performance.',
-      image: 'https://images.unsplash.com/photo-1519222970733-f546218fa6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+      title: 'YouPlay',
+      description: 'A full-stack web application offering a premium video-on-demand, over-the-top (OTT) streaming service. Developed with a clean, modern UI and comprehensive streaming capabilities for an excellent user experience.',
+      image: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
       category: 'web',
-      technologies: ['HTML/CSS', 'JavaScript', 'Figma', 'WordPress'],
-      link: 'https://example.com/corporate',
-      github: 'https://github.com/username/corporate'
-    },
-    {
-      id: 4,
-      title: 'Health & Fitness Tracker',
-      description: 'Mobile application for tracking workouts, nutrition, and overall health metrics with data visualization.',
-      image: 'https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      category: 'app',
-      technologies: ['React Native', 'TypeScript', 'Node.js', 'MongoDB'],
-      link: 'https://example.com/fitness',
-      github: 'https://github.com/username/fitness'
-    },
-    {
-      id: 5,
-      title: 'AI Chatbot Interface',
-      description: 'User interface for an AI-powered chatbot with natural language processing capabilities.',
-      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      category: 'ai',
-      technologies: ['React', 'Python', 'TensorFlow', 'Flask'],
-      link: 'https://example.com/chatbot',
-      github: 'https://github.com/username/chatbot'
-    },
-    {
-      id: 6,
-      title: 'Real Estate Platform',
-      description: 'Web platform for property listings with advanced search, filtering, and interactive maps.',
-      image: 'https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      category: 'web',
-      technologies: ['Next.js', 'Tailwind CSS', 'PostgreSQL', 'Google Maps API'],
-      link: 'https://example.com/realestate',
-      github: 'https://github.com/username/realestate'
+      technologies: ['React.js', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      link: 'https://example.com/youplay',
+      github: 'https://github.com/username/youplay'
     }
   ];
 
@@ -84,9 +44,7 @@ const Projects: React.FC = () => {
 
   const categories = [
     { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Development' },
-    { id: 'app', name: 'Mobile Apps' },
-    { id: 'ai', name: 'AI Projects' }
+    { id: 'web', name: 'Web Development' }
   ];
 
   return (
@@ -121,7 +79,7 @@ const Projects: React.FC = () => {
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           ref={refProjects}
           initial={{ opacity: 0 }}
           animate={inViewProjects ? { opacity: 1 } : {}}
@@ -180,9 +138,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-500 capitalize">
-                    {project.category === 'web' ? 'Web Development' : 
-                     project.category === 'app' ? 'Mobile App' : 
-                     project.category === 'ai' ? 'AI Project' : project.category}
+                    Web Development
                   </span>
                 </div>
               </div>

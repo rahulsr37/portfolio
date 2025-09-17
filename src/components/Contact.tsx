@@ -58,8 +58,8 @@ const Contact: React.FC = () => {
         </svg>
       ),
       title: 'Call Me',
-      content: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      content: '1234567890',
+      link: 'tel:+1234567890'
     },
     {
       icon: (
@@ -79,8 +79,8 @@ const Contact: React.FC = () => {
         </svg>
       ),
       title: 'Location',
-      content: 'New York, USA',
-      link: 'https://maps.google.com/?q=New+York,USA'
+      content: 'Mumbai, India',
+      link: 'https://maps.google.com/?q=Mumbai,India'
     }
   ];
 
@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
 
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/rahulsr37" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-white text-gray-700 hover:text-primary p-3 rounded-full shadow-md transition-colors"
@@ -149,7 +149,7 @@ const Contact: React.FC = () => {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/rahul-singh-a45947218/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-white text-gray-700 hover:text-primary p-3 rounded-full shadow-md transition-colors"
